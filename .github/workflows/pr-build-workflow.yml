@@ -6,7 +6,7 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    if: github.repository == 'spring-projects/spring-session'
+    if: github.repository == 'kirklin/spring-session'
     strategy:
       matrix:
         jdk: [17]

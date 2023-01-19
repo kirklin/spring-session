@@ -17,7 +17,7 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    if: github.repository == 'spring-projects/spring-session'
+    if: github.repository == 'kirklin/spring-session'
     strategy:
       matrix:
         jdk: [17]
@@ -48,7 +48,7 @@ jobs:
     name: Deploy Artifacts
     needs: [build]
     runs-on: ubuntu-latest
-    if: github.repository == 'spring-projects/spring-session'
+    if: github.repository == 'kirklin/spring-session'
     steps:
       - uses: actions/checkout@v3
       - name: Set up JDK
@@ -77,7 +77,7 @@ jobs:
     name: Deploy Docs
     needs: [build]
     runs-on: ubuntu-latest
-    if: github.repository == 'spring-projects/spring-session'
+    if: github.repository == 'kirklin/spring-session'
     steps:
       - uses: actions/checkout@v3
       - name: Set up JDK
